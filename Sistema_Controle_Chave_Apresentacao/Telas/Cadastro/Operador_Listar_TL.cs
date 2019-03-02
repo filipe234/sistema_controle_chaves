@@ -38,7 +38,42 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
         {
             try
             {
+                if ( e.RowHandle > -1 )
+                {
+                    short oCodigo = Convert.ToInt16(gv_Listar_Operador.GetRowCellValue(e.RowHandle, col_Codigo));
+                    string oNome = Convert.ToString(gv_Listar_Operador.GetRowCellValue(e.RowHandle, col_Nome_Operador));
 
+                    if ( e.Column.AbsoluteIndex == col_Alterar.AbsoluteIndex )
+                    {
+                        Operador_Manter_TL oTela_Manter = new Operador_Manter_TL();
+                        oTela_Manter.Funcionalidade = Codigo_Funcionalidade.Alterar;
+                        oTela_Manter.Text = "Alterar Bandeira Cartão - " + oNome;
+                        oTela_Manter.Codigo = oCodigo;
+
+                        oTela_Manter.MdiParent = this.MdiParent;
+                        oTela_Manter.Tela_Origem = this;
+                        oTela_Manter.Show();
+                    }
+                    else if ( e.Column.AbsoluteIndex == col_Visualizar.AbsoluteIndex )
+                    {
+                        Operador_Manter_TL oTela_Manter = new Operador_Manter_TL();
+                        oTela_Manter.Funcionalidade = Codigo_Funcionalidade.Visualizar;
+                        oTela_Manter.Text = "Visualizar Bandeira Cartão - " + oNome;
+                        oTela_Manter.Codigo = oCodigo;
+                        oTela_Manter.MdiParent = this.MdiParent;
+                        oTela_Manter.Tela_Origem = this;
+                        oTela_Manter.Show();
+                    }
+                    else if ( e.Column.AbsoluteIndex == col_Excluir.AbsoluteIndex )
+                    {
+                        if ( MessageBox.Show("Deseja excluir o operador cartão\"" + oNome + "\"?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes )
+                        {
+                            SG_Cadastro_NG.Operador.Excluir(oCodigo);
+                            btn_Pesquisar_Click(sender, e);
+                            MessageBox.Show("Operador excluido com sucesso!", "Operador");
+                        }
+                    }
+                }
             }
             catch ( Exception ex )
             {

@@ -47,7 +47,7 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
             return oLista;
         }
 
-        private Operador_BD Pesquisar_pelo_Codigo( BD_SISTEMA_CONTROLE_CHAVE pBD, int pCodigo )
+        public Operador_BD Pesquisar_pelo_Codigo( BD_SISTEMA_CONTROLE_CHAVE pBD, int pCodigo )
         {
             return pBD.Operador_BDs.Where(x => x.Codigo == pCodigo).FirstOrDefault();
         }
@@ -152,7 +152,7 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
         {
             if ( pOperador.Nome_Operador == null || pOperador.Nome_Operador == string.Empty )
                 throw new Exception("O nome é obrigátorio!");
-            if ( pOperador.CPF == null || pOperador.CPF == string.Empty || pOperador.CPF.Length>11)
+            if ( pOperador.CPF == null || pOperador.CPF == string.Empty || pOperador.CPF.Length > 11 )
                 throw new Exception("O CPF é obrigátorio!");
             if ( pOperador.Login == null || pOperador.Login == string.Empty )
                 throw new Exception("O Login é obrigátorio!");

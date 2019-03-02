@@ -27,13 +27,13 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
                                                  {
                                                      Código_Funcionario = c.Codigo,
                                                      Nome_Funcionario = c.Nome,
-                                                     Numero_Cpf = c.CPF,
-                                                     Numero_Rg = c.RG,
-                                                     Codigo_Setor= s.Codigo,
+                                                     CPF = c.CPF,
+                                                     RG = c.RG,
+                                                     Nome_Setor = s.Nome,
                                                  } ).ToList();
 
             foreach ( Funcionario_Grid_BD item in oLista )
-                item.Numero_Cpf = Formatacao.FormatCPF(item.Numero_Cpf);
+                item.CPF = Formatacao.FormatCPF(item.CPF);
 
             return oLista;
         }
@@ -147,8 +147,8 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
         public int Código_Funcionario { get; set; }
         public short Codigo_Setor { get; set; }
         public string Nome_Funcionario { get; set; }
-        public string Numero_Cpf { get; set; }
-        public string Numero_Rg { get; set; }
+        public string CPF { get; set; }
+        public string RG { get; set; }
         public byte [] Foto { get; set; }
         public string Nome_Setor { get; internal set; }
     }

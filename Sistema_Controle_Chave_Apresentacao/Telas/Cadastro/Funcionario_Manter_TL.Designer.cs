@@ -250,6 +250,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "Funcionario_Manter_TL";
             this.Text = "Funcionario_Manter_TL";
+            this.Shown += new System.EventHandler(this.Funcionario_Manter_TL_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

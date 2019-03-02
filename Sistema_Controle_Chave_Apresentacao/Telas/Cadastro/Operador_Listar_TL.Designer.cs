@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Operador_Listar_TL));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -63,25 +63,25 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Nome_Operador = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl1 ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl2 ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl3 ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl4 ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl5 ) ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl7 ) ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
-            ( (System.ComponentModel.ISupportInitialize)( this.gc_Listar_Operador ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.gv_Listar_Operador ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.repositoryItemButtonEdit1 ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.repositoryItemButtonEdit2 ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.repositoryItemButtonEdit3 ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl6 ) ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Operador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Operador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
-            ( (System.ComponentModel.ISupportInitialize)( this.groupControl1 ) ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ( (System.ComponentModel.ISupportInitialize)( this.txt_CPF.Properties ) ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.txt_Nome_Operador.Properties ) ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Operador.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -142,19 +142,18 @@
             this.gc_Listar_Operador.Location = new System.Drawing.Point(2, 2);
             this.gc_Listar_Operador.MainView = this.gv_Listar_Operador;
             this.gc_Listar_Operador.Name = "gc_Listar_Operador";
-            this.gc_Listar_Operador.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem [] {
+            this.gc_Listar_Operador.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEdit2,
             this.repositoryItemButtonEdit3});
             this.gc_Listar_Operador.Size = new System.Drawing.Size(932, 227);
             this.gc_Listar_Operador.TabIndex = 0;
-            this.gc_Listar_Operador.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView [] {
+            this.gc_Listar_Operador.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_Listar_Operador});
-
             // 
             // gv_Listar_Operador
             // 
-            this.gv_Listar_Operador.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn [] {
+            this.gv_Listar_Operador.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_Excluir,
             this.col_Visualizar,
             this.col_Alterar,
@@ -184,9 +183,9 @@
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions1.Image = ( (System.Drawing.Image)( resources.GetObject("editorButtonImageOptions1.Image") ) );
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton [] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions1, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            editorButtonImageOptions10.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions10.Image")));
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions10, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -205,9 +204,9 @@
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions2.Image = ( (System.Drawing.Image)( resources.GetObject("editorButtonImageOptions2.Image") ) );
-            this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton [] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions2, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
+            this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions11, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -226,15 +225,16 @@
             // repositoryItemButtonEdit3
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
-            editorButtonImageOptions3.Image = ( (System.Drawing.Image)( resources.GetObject("editorButtonImageOptions3.Image") ) );
-            this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton [] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions3, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            editorButtonImageOptions12.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions12.Image")));
+            this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions12, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // col_Codigo
             // 
             this.col_Codigo.Caption = "Código";
+            this.col_Codigo.FieldName = "Codigo";
             this.col_Codigo.Name = "col_Codigo";
             this.col_Codigo.Width = 71;
             // 
@@ -311,7 +311,7 @@
             // 
             // brn_Inserir
             // 
-            this.brn_Inserir.ImageOptions.Image = ( (System.Drawing.Image)( resources.GetObject("brn_Inserir.ImageOptions.Image") ) );
+            this.brn_Inserir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("brn_Inserir.ImageOptions.Image")));
             this.brn_Inserir.Location = new System.Drawing.Point(115, 6);
             this.brn_Inserir.Name = "brn_Inserir";
             this.brn_Inserir.Size = new System.Drawing.Size(134, 36);
@@ -337,7 +337,7 @@
             // 
             // btn_Limprar
             // 
-            this.btn_Limprar.ImageOptions.Image = ( (System.Drawing.Image)( resources.GetObject("btn_Limprar.ImageOptions.Image") ) );
+            this.btn_Limprar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Limprar.ImageOptions.Image")));
             this.btn_Limprar.Location = new System.Drawing.Point(255, 87);
             this.btn_Limprar.Name = "btn_Limprar";
             this.btn_Limprar.Size = new System.Drawing.Size(134, 36);
@@ -347,7 +347,7 @@
             // 
             // btn_Pesquisar
             // 
-            this.btn_Pesquisar.ImageOptions.Image = ( (System.Drawing.Image)( resources.GetObject("btn_Pesquisar.ImageOptions.Image") ) );
+            this.btn_Pesquisar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Pesquisar.ImageOptions.Image")));
             this.btn_Pesquisar.Location = new System.Drawing.Point(115, 87);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
             this.btn_Pesquisar.Size = new System.Drawing.Size(134, 36);
@@ -396,28 +396,29 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "Operador_Listar_TL";
+            this.ShowMdiChildCaptionInParentTitle = true;
             this.Text = "Pesquisar Operador";
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl1 ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl2 ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl3 ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl4 ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl5 ) ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl7 ) ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
-            ( (System.ComponentModel.ISupportInitialize)( this.gc_Listar_Operador ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.gv_Listar_Operador ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.repositoryItemButtonEdit1 ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.repositoryItemButtonEdit2 ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.repositoryItemButtonEdit3 ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.panelControl6 ) ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Operador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Operador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
-            ( (System.ComponentModel.ISupportInitialize)( this.groupControl1 ) ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ( (System.ComponentModel.ISupportInitialize)( this.txt_CPF.Properties ) ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)( this.txt_Nome_Operador.Properties ) ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Operador.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

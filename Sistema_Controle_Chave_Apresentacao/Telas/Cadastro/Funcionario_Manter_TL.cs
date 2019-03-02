@@ -24,21 +24,6 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
             InitializeComponent();
         }
 
-        private void Funcionario_Manter_TL_Shown( object sender, DevExpress.XtraEditors.Controls.BeforeShowMenuEventArgs e )
-        {
-            try
-            {
-                using ( BD_SISTEMA_CONTROLE_CHAVE oBD = new BD_SISTEMA_CONTROLE_CHAVE() )
-                {
-                    Carregar_Componente.Setor(lue_Setor, oBD, 0);
-                }
-            }
-            catch ( Exception ex )
-            {
-                MessageBox.Show(ex.Message, "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
         private void btn_Salvar_Click( object sender, EventArgs e )
         {
             try
@@ -50,11 +35,11 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
                 oFuncionario.CPF = txt_CPF.Text;
                 oFuncionario.Nome = txt_Nome_Funcionario.Text;
                 oFuncionario.RG = txt_RG.Text;
-               
+
 
                 if ( Funcionalidade == Codigo_Funcionalidade.Inserir )
                 {
-                   SG_Cadastro_Funcinario_NG.Funcionario.Inserir(oFuncionario);
+                    SG_Cadastro_Funcinario_NG.Funcionario.Inserir(oFuncionario);
                     MessageBox.Show("Funcionário Cadastrado com seucesso!", "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     Close();
                 }
@@ -80,6 +65,23 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
             {
                 MessageBox.Show(ex.Message, "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void Funcionario_Manter_TL_Shown( object sender, EventArgs e )
+        {
+
+            try
+            {
+                using ( BD_SISTEMA_CONTROLE_CHAVE oBD = new BD_SISTEMA_CONTROLE_CHAVE() )
+                {
+                    Carregar_Componente.Setor(lue_Setor, oBD, 0);
+                }
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show(ex.Message, "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
     }
 }
