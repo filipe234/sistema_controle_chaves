@@ -14,5 +14,6 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
     }
     public class Funcionalidade
     {
+        /*comentario*/
     }
 }
