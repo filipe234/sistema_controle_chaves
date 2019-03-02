@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="60b42ca6c8154d31ad02a2270122db84" Name="Diagram1" ZoomLevel="130">
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Chave_BD" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Funcionario_BD" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Nivel_Operador_BD" Width="1.5" PointX="6" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Operador_BD" Width="3" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Saida_Chave_BD" Width="1.5" PointX="7.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Setor_BD" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Situacao_Chave_BD" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Tipo_Setor_BD" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_CHAVE_TB_CAD_SETOR" ManuallyRouted="false" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE" ManuallyRouted="false" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR" ManuallyRouted="false" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_OPERADOR_TB_CAD_SETOR" ManuallyRouted="false" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Sistema_Controle_Chave.Plantao_BD" Width="1.5" PointX="8.375" PointY="0.875" />
+        <AssociationConnector Association="Sistema_Controle_Chave.FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

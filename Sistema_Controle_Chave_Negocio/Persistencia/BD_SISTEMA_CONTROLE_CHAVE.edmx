@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Sistema_Controle_Chave.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_CAD_CHAVE">
+          <Key>
+            <PropertyRef Name="CD_CHAVE" />
+          </Key>
+          <Property Name="CD_CHAVE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CD_SETOR" Type="smallint" Nullable="false" />
+          <Property Name="CD_SITUACAO_CHAVE" Type="smallint" Nullable="false" />
+          <Property Name="NM_CHAVE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NR_CHAVE" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="FL_CHAVE_RESTRITA" Type="bit" />
+        </EntityType>
+        <EntityType Name="TB_CAD_FUNCIONARIO">
+          <Key>
+            <PropertyRef Name="CD_FUNCIONARIO" />
+          </Key>
+          <Property Name="CD_FUNCIONARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CD_SETOR" Type="smallint" Nullable="false" />
+          <Property Name="NM_FUNCIONARIO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NR_CPF" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="NR_RG" Type="varchar" MaxLength="50" />
+          <Property Name="FOTO" Type="image" />
+        </EntityType>
+        <EntityType Name="TB_CAD_NIVEL_OPERADOR">
+          <Key>
+            <PropertyRef Name="CD_NIVEL_OPERADOR" />
+          </Key>
+          <Property Name="CD_NIVEL_OPERADOR" Type="smallint" Nullable="false" />
+          <Property Name="NM_NIVEL_OPERADOR" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TB_CAD_OPERADOR">
+          <Key>
+            <PropertyRef Name="CD_OPERADOR" />
+          </Key>
+          <Property Name="CD_OPERADOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CD_PLANTAO" Type="smallint" Nullable="false" />
+          <Property Name="CD_NIVEL_OPERADOR" Type="smallint" Nullable="false" />
+          <Property Name="CD_SETOR" Type="smallint" Nullable="false" />
+          <Property Name="NM_LOGIN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DS_SENHA" Type="varchar(max)" Nullable="false" />
+          <Property Name="NM_OPERADOR" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NR_CPF" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="NR_RG" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_CAD_PLANTAO">
+          <Key>
+            <PropertyRef Name="CD_PLANTAO" />
+          </Key>
+          <Property Name="CD_PLANTAO" Type="smallint" Nullable="false" />
+          <Property Name="NM_PLANTAO" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_CAD_SAIDA_CHAVE">
+          <Key>
+            <PropertyRef Name="CD_SAIDA_CHAVE" />
+          </Key>
+          <Property Name="CD_SAIDA_CHAVE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CD_OPERADOR" Type="int" Nullable="false" />
+          <Property Name="CD_FUNCIONARIO" Type="int" Nullable="false" />
+          <Property Name="DT_SAIDA" Type="datetime" Nullable="false" />
+          <Property Name="DT_DEVOLUCAO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_CAD_SETOR">
+          <Key>
+            <PropertyRef Name="CD_SETOR" />
+          </Key>
+          <Property Name="CD_SETOR" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CD_TIPO_SETOR" Type="int" Nullable="false" />
+          <Property Name="NM_SETOR" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_CAD_SITUACAO_CHAVE">
+          <Key>
+            <PropertyRef Name="CD_SITUACAO_CHAVE" />
+          </Key>
+          <Property Name="CD_SITUACAO_CHAVE" Type="smallint" Nullable="false" />
+          <Property Name="NM_SITUACAO_CHAVE" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_CAD_TIPO_SETOR">
+          <Key>
+            <PropertyRef Name="CD_TIPO_SETOR" />
+          </Key>
+          <Property Name="CD_TIPO_SETOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NM_TIPO_SETOR" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TB_CAD_CHAVE_TB_CAD_SETOR">
+          <End Role="TB_CAD_SETOR" Type="Self.TB_CAD_SETOR" Multiplicity="1" />
+          <End Role="TB_CAD_CHAVE" Type="Self.TB_CAD_CHAVE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SETOR">
+              <PropertyRef Name="CD_SETOR" />
+            </Principal>
+            <Dependent Role="TB_CAD_CHAVE">
+              <PropertyRef Name="CD_SETOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE">
+          <End Role="TB_CAD_SITUACAO_CHAVE" Type="Self.TB_CAD_SITUACAO_CHAVE" Multiplicity="1" />
+          <End Role="TB_CAD_CHAVE" Type="Self.TB_CAD_CHAVE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SITUACAO_CHAVE">
+              <PropertyRef Name="CD_SITUACAO_CHAVE" />
+            </Principal>
+            <Dependent Role="TB_CAD_CHAVE">
+              <PropertyRef Name="CD_SITUACAO_CHAVE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR">
+          <End Role="TB_CAD_SETOR" Type="Self.TB_CAD_SETOR" Multiplicity="1" />
+          <End Role="TB_CAD_FUNCIONARIO" Type="Self.TB_CAD_FUNCIONARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SETOR">
+              <PropertyRef Name="CD_SETOR" />
+            </Principal>
+            <Dependent Role="TB_CAD_FUNCIONARIO">
+              <PropertyRef Name="CD_SETOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR">
+          <End Role="TB_CAD_NIVEL_OPERADOR" Type="Self.TB_CAD_NIVEL_OPERADOR" Multiplicity="1" />
+          <End Role="TB_CAD_OPERADOR" Type="Self.TB_CAD_OPERADOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_NIVEL_OPERADOR">
+              <PropertyRef Name="CD_NIVEL_OPERADOR" />
+            </Principal>
+            <Dependent Role="TB_CAD_OPERADOR">
+              <PropertyRef Name="CD_NIVEL_OPERADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO">
+          <End Role="TB_CAD_PLANTAO" Type="Self.TB_CAD_PLANTAO" Multiplicity="1" />
+          <End Role="TB_CAD_OPERADOR" Type="Self.TB_CAD_OPERADOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_PLANTAO">
+              <PropertyRef Name="CD_PLANTAO" />
+            </Principal>
+            <Dependent Role="TB_CAD_OPERADOR">
+              <PropertyRef Name="CD_PLANTAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_OPERADOR_TB_CAD_SETOR">
+          <End Role="TB_CAD_SETOR" Type="Self.TB_CAD_SETOR" Multiplicity="1" />
+          <End Role="TB_CAD_OPERADOR" Type="Self.TB_CAD_OPERADOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SETOR">
+              <PropertyRef Name="CD_SETOR" />
+            </Principal>
+            <Dependent Role="TB_CAD_OPERADOR">
+              <PropertyRef Name="CD_SETOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO">
+          <End Role="TB_CAD_FUNCIONARIO" Type="Self.TB_CAD_FUNCIONARIO" Multiplicity="1" />
+          <End Role="TB_CAD_SAIDA_CHAVE" Type="Self.TB_CAD_SAIDA_CHAVE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_FUNCIONARIO">
+              <PropertyRef Name="CD_FUNCIONARIO" />
+            </Principal>
+            <Dependent Role="TB_CAD_SAIDA_CHAVE">
+              <PropertyRef Name="CD_FUNCIONARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR">
+          <End Role="TB_CAD_OPERADOR" Type="Self.TB_CAD_OPERADOR" Multiplicity="1" />
+          <End Role="TB_CAD_SAIDA_CHAVE" Type="Self.TB_CAD_SAIDA_CHAVE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_OPERADOR">
+              <PropertyRef Name="CD_OPERADOR" />
+            </Principal>
+            <Dependent Role="TB_CAD_SAIDA_CHAVE">
+              <PropertyRef Name="CD_OPERADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR">
+          <End Role="TB_CAD_TIPO_SETOR" Type="Self.TB_CAD_TIPO_SETOR" Multiplicity="1" />
+          <End Role="TB_CAD_SETOR" Type="Self.TB_CAD_SETOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_TIPO_SETOR">
+              <PropertyRef Name="CD_TIPO_SETOR" />
+            </Principal>
+            <Dependent Role="TB_CAD_SETOR">
+              <PropertyRef Name="CD_TIPO_SETOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Sistema_Controle_ChaveStoreContainer">
+          <EntitySet Name="TB_CAD_CHAVE" EntityType="Self.TB_CAD_CHAVE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_FUNCIONARIO" EntityType="Self.TB_CAD_FUNCIONARIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_NIVEL_OPERADOR" EntityType="Self.TB_CAD_NIVEL_OPERADOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_OPERADOR" EntityType="Self.TB_CAD_OPERADOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_PLANTAO" EntityType="Self.TB_CAD_PLANTAO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_SAIDA_CHAVE" EntityType="Self.TB_CAD_SAIDA_CHAVE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_SETOR" EntityType="Self.TB_CAD_SETOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_SITUACAO_CHAVE" EntityType="Self.TB_CAD_SITUACAO_CHAVE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CAD_TIPO_SETOR" EntityType="Self.TB_CAD_TIPO_SETOR" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TB_CAD_CHAVE_TB_CAD_SETOR" Association="Self.FK_TB_CAD_CHAVE_TB_CAD_SETOR">
+            <End Role="TB_CAD_SETOR" EntitySet="TB_CAD_SETOR" />
+            <End Role="TB_CAD_CHAVE" EntitySet="TB_CAD_CHAVE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE" Association="Self.FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE">
+            <End Role="TB_CAD_SITUACAO_CHAVE" EntitySet="TB_CAD_SITUACAO_CHAVE" />
+            <End Role="TB_CAD_CHAVE" EntitySet="TB_CAD_CHAVE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR" Association="Self.FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR">
+            <End Role="TB_CAD_SETOR" EntitySet="TB_CAD_SETOR" />
+            <End Role="TB_CAD_FUNCIONARIO" EntitySet="TB_CAD_FUNCIONARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR" Association="Self.FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR">
+            <End Role="TB_CAD_NIVEL_OPERADOR" EntitySet="TB_CAD_NIVEL_OPERADOR" />
+            <End Role="TB_CAD_OPERADOR" EntitySet="TB_CAD_OPERADOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO" Association="Self.FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO">
+            <End Role="TB_CAD_PLANTAO" EntitySet="TB_CAD_PLANTAO" />
+            <End Role="TB_CAD_OPERADOR" EntitySet="TB_CAD_OPERADOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_OPERADOR_TB_CAD_SETOR" Association="Self.FK_TB_CAD_OPERADOR_TB_CAD_SETOR">
+            <End Role="TB_CAD_SETOR" EntitySet="TB_CAD_SETOR" />
+            <End Role="TB_CAD_OPERADOR" EntitySet="TB_CAD_OPERADOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO" Association="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO">
+            <End Role="TB_CAD_FUNCIONARIO" EntitySet="TB_CAD_FUNCIONARIO" />
+            <End Role="TB_CAD_SAIDA_CHAVE" EntitySet="TB_CAD_SAIDA_CHAVE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR" Association="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR">
+            <End Role="TB_CAD_OPERADOR" EntitySet="TB_CAD_OPERADOR" />
+            <End Role="TB_CAD_SAIDA_CHAVE" EntitySet="TB_CAD_SAIDA_CHAVE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR" Association="Self.FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR">
+            <End Role="TB_CAD_TIPO_SETOR" EntitySet="TB_CAD_TIPO_SETOR" />
+            <End Role="TB_CAD_SETOR" EntitySet="TB_CAD_SETOR" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Sistema_Controle_Chave" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Chave_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Setor" Type="Int16" Nullable="false" />
+          <Property Name="Situacao" Type="Int16" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Numero" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="E_Chave_Restrita" Type="Boolean" />
+          <NavigationProperty Name="TB_CAD_SETOR" Relationship="Self.FK_TB_CAD_CHAVE_TB_CAD_SETOR" FromRole="TB_CAD_CHAVE" ToRole="TB_CAD_SETOR" />
+          <NavigationProperty Name="TB_CAD_SITUACAO_CHAVE" Relationship="Self.FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE" FromRole="TB_CAD_CHAVE" ToRole="TB_CAD_SITUACAO_CHAVE" />
+        </EntityType>
+        <EntityType Name="Funcionario_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Setor" Type="Int16" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="TB_CAD_SETOR" Relationship="Self.FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR" FromRole="TB_CAD_FUNCIONARIO" ToRole="TB_CAD_SETOR" />
+          <NavigationProperty Name="TB_CAD_SAIDA_CHAVE" Relationship="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO" FromRole="TB_CAD_FUNCIONARIO" ToRole="TB_CAD_SAIDA_CHAVE" />
+        </EntityType>
+        <EntityType Name="Nivel_Operador_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int16" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_CAD_OPERADOR" Relationship="Self.FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR" FromRole="TB_CAD_NIVEL_OPERADOR" ToRole="TB_CAD_OPERADOR" />
+        </EntityType>
+        <EntityType Name="Operador_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo_Plantao" Type="Int16" Nullable="false" />
+          <Property Name="Codigo_Nivel_Operador" Type="Int16" Nullable="false" />
+          <Property Name="Codigo_Setor" Type="Int16" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Senha" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nome_Operador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TB_CAD_NIVEL_OPERADOR" Relationship="Self.FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR" FromRole="TB_CAD_OPERADOR" ToRole="TB_CAD_NIVEL_OPERADOR" />
+          <NavigationProperty Name="TB_CAD_SETOR" Relationship="Self.FK_TB_CAD_OPERADOR_TB_CAD_SETOR" FromRole="TB_CAD_OPERADOR" ToRole="TB_CAD_SETOR" />
+          <NavigationProperty Name="TB_CAD_SAIDA_CHAVE" Relationship="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR" FromRole="TB_CAD_OPERADOR" ToRole="TB_CAD_SAIDA_CHAVE" />
+          <NavigationProperty Name="TB_CAD_PLANTAO" Relationship="Sistema_Controle_Chave.FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO" FromRole="Operador_BD" ToRole="TB_CAD_PLANTAO" />
+        </EntityType>
+        <EntityType Name="Saida_Chave_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo_Operador" Type="Int32" Nullable="false" />
+          <Property Name="Codigo_Funcionario" Type="Int32" Nullable="false" />
+          <Property Name="Data_Saida" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Data_Devolucao" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="TB_CAD_FUNCIONARIO" Relationship="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO" FromRole="TB_CAD_SAIDA_CHAVE" ToRole="TB_CAD_FUNCIONARIO" />
+          <NavigationProperty Name="TB_CAD_OPERADOR" Relationship="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR" FromRole="TB_CAD_SAIDA_CHAVE" ToRole="TB_CAD_OPERADOR" />
+        </EntityType>
+        <EntityType Name="Setor_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TB_CAD_CHAVE" Relationship="Self.FK_TB_CAD_CHAVE_TB_CAD_SETOR" FromRole="TB_CAD_SETOR" ToRole="TB_CAD_CHAVE" />
+          <NavigationProperty Name="TB_CAD_FUNCIONARIO" Relationship="Self.FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR" FromRole="TB_CAD_SETOR" ToRole="TB_CAD_FUNCIONARIO" />
+          <NavigationProperty Name="TB_CAD_OPERADOR" Relationship="Self.FK_TB_CAD_OPERADOR_TB_CAD_SETOR" FromRole="TB_CAD_SETOR" ToRole="TB_CAD_OPERADOR" />
+          <NavigationProperty Name="TB_CAD_TIPO_SETOR" Relationship="Self.FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR" FromRole="TB_CAD_SETOR" ToRole="TB_CAD_TIPO_SETOR" />
+        </EntityType>
+        <EntityType Name="Situacao_Chave_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int16" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TB_CAD_CHAVE" Relationship="Self.FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE" FromRole="TB_CAD_SITUACAO_CHAVE" ToRole="TB_CAD_CHAVE" />
+        </EntityType>
+        <EntityType Name="Tipo_Setor_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TB_CAD_SETOR" Relationship="Self.FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR" FromRole="TB_CAD_TIPO_SETOR" ToRole="TB_CAD_SETOR" />
+        </EntityType>
+        <Association Name="FK_TB_CAD_CHAVE_TB_CAD_SETOR">
+          <End Role="TB_CAD_SETOR" Type="Sistema_Controle_Chave.Setor_BD" Multiplicity="1" />
+          <End Role="TB_CAD_CHAVE" Type="Sistema_Controle_Chave.Chave_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SETOR">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_CHAVE">
+              <PropertyRef Name="Setor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE">
+          <End Role="TB_CAD_SITUACAO_CHAVE" Type="Sistema_Controle_Chave.Situacao_Chave_BD" Multiplicity="1" />
+          <End Role="TB_CAD_CHAVE" Type="Sistema_Controle_Chave.Chave_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SITUACAO_CHAVE">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_CHAVE">
+              <PropertyRef Name="Situacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR">
+          <End Role="TB_CAD_SETOR" Type="Sistema_Controle_Chave.Setor_BD" Multiplicity="1" />
+          <End Role="TB_CAD_FUNCIONARIO" Type="Sistema_Controle_Chave.Funcionario_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SETOR">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_FUNCIONARIO">
+              <PropertyRef Name="Setor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO">
+          <End Role="TB_CAD_FUNCIONARIO" Type="Sistema_Controle_Chave.Funcionario_BD" Multiplicity="1" />
+          <End Role="TB_CAD_SAIDA_CHAVE" Type="Sistema_Controle_Chave.Saida_Chave_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_FUNCIONARIO">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_SAIDA_CHAVE">
+              <PropertyRef Name="Codigo_Funcionario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR">
+          <End Role="TB_CAD_NIVEL_OPERADOR" Type="Sistema_Controle_Chave.Nivel_Operador_BD" Multiplicity="1" />
+          <End Role="TB_CAD_OPERADOR" Type="Sistema_Controle_Chave.Operador_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_NIVEL_OPERADOR">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_OPERADOR">
+              <PropertyRef Name="Codigo_Nivel_Operador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_OPERADOR_TB_CAD_SETOR">
+          <End Role="TB_CAD_SETOR" Type="Sistema_Controle_Chave.Setor_BD" Multiplicity="1" />
+          <End Role="TB_CAD_OPERADOR" Type="Sistema_Controle_Chave.Operador_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_SETOR">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_OPERADOR">
+              <PropertyRef Name="Codigo_Setor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR">
+          <End Role="TB_CAD_OPERADOR" Type="Sistema_Controle_Chave.Operador_BD" Multiplicity="1" />
+          <End Role="TB_CAD_SAIDA_CHAVE" Type="Sistema_Controle_Chave.Saida_Chave_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_OPERADOR">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_SAIDA_CHAVE">
+              <PropertyRef Name="Codigo_Operador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR">
+          <End Role="TB_CAD_TIPO_SETOR" Type="Sistema_Controle_Chave.Tipo_Setor_BD" Multiplicity="1" />
+          <End Role="TB_CAD_SETOR" Type="Sistema_Controle_Chave.Setor_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_TIPO_SETOR">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="TB_CAD_SETOR">
+              <PropertyRef Name="Tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_SISTEMA_CONTROLE_CHAVE" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Chave_BDs" EntityType="Sistema_Controle_Chave.Chave_BD" />
+          <EntitySet Name="Funcionario_BDs" EntityType="Sistema_Controle_Chave.Funcionario_BD" />
+          <EntitySet Name="Nivel_Operador_BDs" EntityType="Sistema_Controle_Chave.Nivel_Operador_BD" />
+          <EntitySet Name="Operador_BDs" EntityType="Sistema_Controle_Chave.Operador_BD" />
+          <EntitySet Name="Saida_Chave_BDs" EntityType="Sistema_Controle_Chave.Saida_Chave_BD" />
+          <EntitySet Name="Setor_BDs" EntityType="Sistema_Controle_Chave.Setor_BD" />
+          <EntitySet Name="Situacao_Chave_BDs" EntityType="Sistema_Controle_Chave.Situacao_Chave_BD" />
+          <EntitySet Name="Tipo_Setor_BDs" EntityType="Sistema_Controle_Chave.Tipo_Setor_BD" />
+          <AssociationSet Name="FK_TB_CAD_CHAVE_TB_CAD_SETOR" Association="Self.FK_TB_CAD_CHAVE_TB_CAD_SETOR">
+            <End Role="TB_CAD_SETOR" EntitySet="Setor_BDs" />
+            <End Role="TB_CAD_CHAVE" EntitySet="Chave_BDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE" Association="Self.FK_TB_CAD_CHAVE_TB_CAD_SITUACAO_CHAVE">
+            <End Role="TB_CAD_SITUACAO_CHAVE" EntitySet="Situacao_Chave_BDs" />
+            <End Role="TB_CAD_CHAVE" EntitySet="Chave_BDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR" Association="Self.FK_TB_CAD_FUNCIONARIO_TB_CAD_SETOR">
+            <End Role="TB_CAD_SETOR" EntitySet="Setor_BDs" />
+            <End Role="TB_CAD_FUNCIONARIO" EntitySet="Funcionario_BDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO" Association="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_FUNCIONARIO">
+            <End Role="TB_CAD_FUNCIONARIO" EntitySet="Funcionario_BDs" />
+            <End Role="TB_CAD_SAIDA_CHAVE" EntitySet="Saida_Chave_BDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR" Association="Self.FK_TB_CAD_OPERADOR_TB_CAD_NIVEL_OPERADOR">
+            <End Role="TB_CAD_NIVEL_OPERADOR" EntitySet="Nivel_Operador_BDs" />
+            <End Role="TB_CAD_OPERADOR" EntitySet="Operador_BDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_OPERADOR_TB_CAD_SETOR" Association="Self.FK_TB_CAD_OPERADOR_TB_CAD_SETOR">
+            <End Role="TB_CAD_SETOR" EntitySet="Setor_BDs" />
+            <End Role="TB_CAD_OPERADOR" EntitySet="Operador_BDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR" Association="Self.FK_TB_CAD_SAIDA_CHAVE_TB_CAD_OPERADOR">
+            <End Role="TB_CAD_OPERADOR" EntitySet="Operador_BDs" />
+            <End Role="TB_CAD_SAIDA_CHAVE" EntitySet="Saida_Chave_BDs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR" Association="Self.FK_TB_CAD_SETOR_TB_CAD_TIPO_SETOR">
+            <End Role="TB_CAD_TIPO_SETOR" EntitySet="Tipo_Setor_BDs" />
+            <End Role="TB_CAD_SETOR" EntitySet="Setor_BDs" />
+          </AssociationSet>
+          <EntitySet Name="Plantao_BDs" EntityType="Sistema_Controle_Chave.Plantao_BD" />
+          <AssociationSet Name="FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO" Association="Sistema_Controle_Chave.FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO">
+            <End Role="TB_CAD_PLANTAO" EntitySet="Plantao_BDs" />
+            <End Role="Operador_BD" EntitySet="Operador_BDs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Plantao_BD">
+          <Key>
+            <PropertyRef Name="Codigo" />
+          </Key>
+          <Property Name="Codigo" Type="Int16" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_CAD_OPERADOR" Relationship="Sistema_Controle_Chave.FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO" FromRole="TB_CAD_PLANTAO" ToRole="Operador_BD" />
+        </EntityType>
+        <Association Name="FK_TB_CAD_OPERADOR_TB_CAD_PLANTAO">
+          <End Type="Sistema_Controle_Chave.Plantao_BD" Role="TB_CAD_PLANTAO" Multiplicity="1" />
+          <End Type="Sistema_Controle_Chave.Operador_BD" Role="Operador_BD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CAD_PLANTAO">
+              <PropertyRef Name="Codigo" />
+            </Principal>
+            <Dependent Role="Operador_BD">
+              <PropertyRef Name="Codigo_Plantao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Sistema_Controle_ChaveStoreContainer" CdmEntityContainer="BD_SISTEMA_CONTROLE_CHAVE">
+          <EntitySetMapping Name="Chave_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Chave_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_CHAVE">
+                <ScalarProperty Name="Codigo" ColumnName="CD_CHAVE" />
+                <ScalarProperty Name="Setor" ColumnName="CD_SETOR" />
+                <ScalarProperty Name="Situacao" ColumnName="CD_SITUACAO_CHAVE" />
+                <ScalarProperty Name="Nome" ColumnName="NM_CHAVE" />
+                <ScalarProperty Name="Numero" ColumnName="NR_CHAVE" />
+                <ScalarProperty Name="E_Chave_Restrita" ColumnName="FL_CHAVE_RESTRITA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Funcionario_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Funcionario_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_FUNCIONARIO">
+                <ScalarProperty Name="Codigo" ColumnName="CD_FUNCIONARIO" />
+                <ScalarProperty Name="Setor" ColumnName="CD_SETOR" />
+                <ScalarProperty Name="Nome" ColumnName="NM_FUNCIONARIO" />
+                <ScalarProperty Name="CPF" ColumnName="NR_CPF" />
+                <ScalarProperty Name="RG" ColumnName="NR_RG" />
+                <ScalarProperty Name="Foto" ColumnName="FOTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nivel_Operador_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Nivel_Operador_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_NIVEL_OPERADOR">
+                <ScalarProperty Name="Codigo" ColumnName="CD_NIVEL_OPERADOR" />
+                <ScalarProperty Name="Nome" ColumnName="NM_NIVEL_OPERADOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operador_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Operador_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_OPERADOR">
+                <ScalarProperty Name="Codigo" ColumnName="CD_OPERADOR" />
+                <ScalarProperty Name="Codigo_Plantao" ColumnName="CD_PLANTAO" />
+                <ScalarProperty Name="Codigo_Nivel_Operador" ColumnName="CD_NIVEL_OPERADOR" />
+                <ScalarProperty Name="Codigo_Setor" ColumnName="CD_SETOR" />
+                <ScalarProperty Name="Login" ColumnName="NM_LOGIN" />
+                <ScalarProperty Name="Senha" ColumnName="DS_SENHA" />
+                <ScalarProperty Name="Nome_Operador" ColumnName="NM_OPERADOR" />
+                <ScalarProperty Name="CPF" ColumnName="NR_CPF" />
+                <ScalarProperty Name="RG" ColumnName="NR_RG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Saida_Chave_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Saida_Chave_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_SAIDA_CHAVE">
+                <ScalarProperty Name="Codigo" ColumnName="CD_SAIDA_CHAVE" />
+                <ScalarProperty Name="Codigo_Operador" ColumnName="CD_OPERADOR" />
+                <ScalarProperty Name="Codigo_Funcionario" ColumnName="CD_FUNCIONARIO" />
+                <ScalarProperty Name="Data_Saida" ColumnName="DT_SAIDA" />
+                <ScalarProperty Name="Data_Devolucao" ColumnName="DT_DEVOLUCAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Setor_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Setor_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_SETOR">
+                <ScalarProperty Name="Codigo" ColumnName="CD_SETOR" />
+                <ScalarProperty Name="Tipo" ColumnName="CD_TIPO_SETOR" />
+                <ScalarProperty Name="Nome" ColumnName="NM_SETOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Situacao_Chave_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Situacao_Chave_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_SITUACAO_CHAVE">
+                <ScalarProperty Name="Codigo" ColumnName="CD_SITUACAO_CHAVE" />
+                <ScalarProperty Name="Nome" ColumnName="NM_SITUACAO_CHAVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_Setor_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Tipo_Setor_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_TIPO_SETOR">
+                <ScalarProperty Name="Codigo" ColumnName="CD_TIPO_SETOR" />
+                <ScalarProperty Name="Nome" ColumnName="NM_TIPO_SETOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Plantao_BDs">
+            <EntityTypeMapping TypeName="Sistema_Controle_Chave.Plantao_BD">
+              <MappingFragment StoreEntitySet="TB_CAD_PLANTAO">
+                <ScalarProperty Name="Nome" ColumnName="NM_PLANTAO" />
+                <ScalarProperty Name="Codigo" ColumnName="CD_PLANTAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
