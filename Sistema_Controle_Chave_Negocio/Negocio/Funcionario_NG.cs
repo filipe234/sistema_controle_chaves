@@ -25,11 +25,12 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
 
                                                  select new Funcionario_Grid_BD
                                                  {
-                                                     Código_Funcionario = c.Codigo,
+                                                     Codigo_Funcionario = c.Codigo,
                                                      Nome_Funcionario = c.Nome,
                                                      CPF = c.CPF,
                                                      RG = c.RG,
                                                      Nome_Setor = s.Nome,
+                                                     Codigo_Setor = s.Codigo,
                                                  } ).ToList();
 
             foreach ( Funcionario_Grid_BD item in oLista )
@@ -37,7 +38,7 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
 
             return oLista;
         }
-        private Funcionario_BD Pesquisar_pelo_Codigo( BD_SISTEMA_CONTROLE_CHAVE pBD, int pCodigo )
+        public Funcionario_BD Pesquisar_pelo_Codigo( BD_SISTEMA_CONTROLE_CHAVE pBD, int pCodigo )
         {
             return pBD.Funcionario_BDs.Where(x => x.Codigo == pCodigo).FirstOrDefault();
         }
@@ -144,7 +145,7 @@ namespace Sistema_Controle_Chave_Negocio.Negocio
     }
     public class Funcionario_Grid_BD
     {
-        public int Código_Funcionario { get; set; }
+        public int Codigo_Funcionario { get; set; }
         public short Codigo_Setor { get; set; }
         public string Nome_Funcionario { get; set; }
         public string CPF { get; set; }

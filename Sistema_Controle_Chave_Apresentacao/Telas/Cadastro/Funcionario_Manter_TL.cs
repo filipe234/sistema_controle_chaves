@@ -18,6 +18,9 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
     {
         #region Atributos
         public Codigo_Funcionalidade Funcionalidade { get; set; }
+        public short Codigo { get; internal set; }
+        public Funcionario_Listar_TL Tela_Origem { get; internal set; }
+
         #endregion
         public Funcionario_Manter_TL()
         {
@@ -46,7 +49,7 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
                 else if ( Funcionalidade == Codigo_Funcionalidade.Alterar )
                 {
                     SG_Cadastro_Funcinario_NG.Funcionario.Alterar(oFuncionario);
-                    MessageBox.Show("Funcionário Alterado com seucesso!", "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Funcionário Alterado com sucesso!", "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch ( Exception ex )
@@ -72,6 +75,14 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
 
             try
             {
+                if ( Funcionalidade == Codigo_Funcionalidade.Alterar )
+                    Carregar_Tela(Codigo);
+
+                else if ( Funcionalidade == Codigo_Funcionalidade.Visualizar )
+                {
+                    Carregar_Tela(Codigo);
+                    Habilitar_Tela();
+                }
                 using ( BD_SISTEMA_CONTROLE_CHAVE oBD = new BD_SISTEMA_CONTROLE_CHAVE() )
                 {
                     Carregar_Componente.Setor(lue_Setor, oBD, 0);
@@ -82,6 +93,31 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
                 MessageBox.Show(ex.Message, "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+        }
+        private void Habilitar_Tela()
+        {
+            txt_CPF.Enabled = false;
+
+            txt_Nome_Funcionario.Enabled = false; ;
+            txt_RG.Enabled = false;
+            lue_Setor.Enabled = false;
+
+            btn_Salvar.Visible = false;
+
+            btn_Cancelar.Location = new Point(280, 2);
+        }
+
+        void Carregar_Tela( int pCodigo )
+        {
+            using ( BD_SISTEMA_CONTROLE_CHAVE oBD = new BD_SISTEMA_CONTROLE_CHAVE() )
+            {
+                Funcionario_BD oFuncionario_BD = SG_Cadastro_Funcinario_NG.Funcionario.Pesquisar_pelo_Codigo(oBD, pCodigo);
+              
+                txt_CPF.Text = oFuncionario_BD.CPF;
+                txt_Nome_Funcionario.Text = oFuncionario_BD.Nome;
+                txt_RG.Text = oFuncionario_BD.RG;
+                Carregar_Componente.Setor(lue_Setor, oBD, oFuncionario_BD.Setor);
+            }
         }
     }
 }

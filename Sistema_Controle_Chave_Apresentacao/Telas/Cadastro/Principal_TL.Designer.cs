@@ -32,6 +32,7 @@
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbi_Funcionario = new DevExpress.XtraBars.BarButtonItem();
             this.bbi_Operador = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -44,9 +45,10 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.bbi_Funcionario,
-            this.bbi_Operador});
+            this.bbi_Operador,
+            this.barButtonItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 3;
+            this.ribbon.MaxItemId = 4;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -71,6 +73,12 @@
             this.bbi_Operador.Name = "bbi_Operador";
             this.bbi_Operador.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbi_Operador_ItemClick);
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 3;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -82,6 +90,7 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.bbi_Funcionario);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbi_Operador);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Cadastro";
             // 
@@ -119,5 +128,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem bbi_Funcionario;
         private DevExpress.XtraBars.BarButtonItem bbi_Operador;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

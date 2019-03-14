@@ -36,7 +36,7 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
         {
             try
             {
-                Funcinario_Listar_TL oTela = new Funcinario_Listar_TL();
+                Funcionario_Listar_TL oTela = new Funcionario_Listar_TL();
                 oTela.MdiParent = this;
                 oTela.Show();
             }
