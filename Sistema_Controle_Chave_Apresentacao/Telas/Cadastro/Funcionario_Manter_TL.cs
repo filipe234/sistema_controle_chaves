@@ -32,13 +32,13 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
             try
             {
                 Funcionario_BD oFuncionario = new Funcionario_BD();
-
+                oFuncionario.Codigo = Codigo;
                 if ( lue_Setor.EditValue != "" && Convert.ToInt16(lue_Setor.EditValue) > 0 )
                     oFuncionario.Setor = Convert.ToInt16(lue_Setor.EditValue);
                 oFuncionario.CPF = txt_CPF.Text;
                 oFuncionario.Nome = txt_Nome_Funcionario.Text;
                 oFuncionario.RG = txt_RG.Text;
-
+             
 
                 if ( Funcionalidade == Codigo_Funcionalidade.Inserir )
                 {

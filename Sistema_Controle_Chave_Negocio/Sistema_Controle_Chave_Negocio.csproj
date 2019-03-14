@@ -50,14 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Negocio\Chave_NG.cs" />
     <Compile Include="Negocio\Funcionalidade.cs" />
     <Compile Include="Negocio\Funcionario_NG.cs" />
     <Compile Include="Negocio\Nivel_Operador_NG.cs" />
     <Compile Include="Negocio\Operador_NG.cs" />
     <Compile Include="Negocio\Plantao_Operador_NG.cs" />
     <Compile Include="Negocio\Setor_NG.cs" />
+    <Compile Include="Negocio\SG_Cadastro_Chave_NG.cs" />
     <Compile Include="Negocio\SG_Cadastro_Funcinario_NG.cs" />
     <Compile Include="Negocio\SG_Cadastro_NG.cs" />
+    <Compile Include="Negocio\Situacao_Chave_NG.cs" />
     <Compile Include="Persistencia\BD_SISTEMA_CONTROLE_CHAVE.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

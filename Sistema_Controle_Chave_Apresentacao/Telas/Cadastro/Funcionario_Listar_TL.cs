@@ -43,7 +43,7 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
                 {
                    
                     string oNome = Convert.ToString(gv_Listar_Funcionario.GetRowCellValue(e.RowHandle, col_Nome_Funcionario));
-                    short oCodigo = Convert.ToInt16(gv_Listar_Funcionario.GetRowCellValue(e.RowHandle, col_Codigo));
+                    short oCodigo = Convert.ToInt16(gv_Listar_Funcionario.GetRowCellValue(e.RowHandle, col_Codigo_Funcionario));
 
                     if ( e.Column.AbsoluteIndex == col_Alterar.AbsoluteIndex )
                     {

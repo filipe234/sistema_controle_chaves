@@ -46,5 +46,20 @@ namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
             }
 
         }
+
+        private void barButtonItem1_ItemClick( object sender, ItemClickEventArgs e )
+        {
+            try
+            {
+                Chaves_Listar_TL oTela = new Chaves_Listar_TL();
+                oTela.MdiParent = this;
+                oTela.Show();
+            }
+            catch ( Exception ex )
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
+
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Sistema_Controle_Chave_Apresentacao.Telas.Cadastro
 {
-    partial class Funcionario_Listar_TL
+    partial class Chaves_Listar_TL
     {
         /// <summary>
         /// Required designer variable.
@@ -29,41 +29,42 @@
         private void InitializeComponent()
         {
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Funcionario_Listar_TL));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chaves_Listar_TL));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.gc_Listar_Funcionario = new DevExpress.XtraGrid.GridControl();
-            this.gv_Listar_Funcionario = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gc_Listar_Operador = new DevExpress.XtraGrid.GridControl();
+            this.gv_Listar_Operador = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_Excluir = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.col_Visualizar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.col_Alterar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.col_Codigo_Funcionario = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_Nome_Funcionario = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_CPF = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_RG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Codigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Nome_Chave = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Numero = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_Setor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Situacao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.brn_Inserir = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btn_Limprar = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Pesquisar = new DevExpress.XtraEditors.SimpleButton();
-            this.txt_CPF = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Chave = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_Nome_Funcionario = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Nome_Chave = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Funcionario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Funcionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Operador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Operador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
@@ -71,8 +72,9 @@
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Funcionario.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Chave.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Chave.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.SuspendLayout();
@@ -85,47 +87,46 @@
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(0, 5);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(973, 440);
-            this.panelControl5.TabIndex = 7;
+            this.panelControl5.Size = new System.Drawing.Size(693, 371);
+            this.panelControl5.TabIndex = 8;
             // 
             // panelControl7
             // 
-            this.panelControl7.Controls.Add(this.gc_Listar_Funcionario);
+            this.panelControl7.Controls.Add(this.gc_Listar_Operador);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(2, 196);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(969, 242);
+            this.panelControl7.Size = new System.Drawing.Size(689, 173);
             this.panelControl7.TabIndex = 2;
             // 
-            // gc_Listar_Funcionario
+            // gc_Listar_Operador
             // 
-            this.gc_Listar_Funcionario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gc_Listar_Funcionario.Location = new System.Drawing.Point(2, 2);
-            this.gc_Listar_Funcionario.MainView = this.gv_Listar_Funcionario;
-            this.gc_Listar_Funcionario.Name = "gc_Listar_Funcionario";
-            this.gc_Listar_Funcionario.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gc_Listar_Operador.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gc_Listar_Operador.Location = new System.Drawing.Point(2, 2);
+            this.gc_Listar_Operador.MainView = this.gv_Listar_Operador;
+            this.gc_Listar_Operador.Name = "gc_Listar_Operador";
+            this.gc_Listar_Operador.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEdit2,
             this.repositoryItemButtonEdit3});
-            this.gc_Listar_Funcionario.Size = new System.Drawing.Size(965, 238);
-            this.gc_Listar_Funcionario.TabIndex = 0;
-            this.gc_Listar_Funcionario.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gv_Listar_Funcionario});
+            this.gc_Listar_Operador.Size = new System.Drawing.Size(685, 169);
+            this.gc_Listar_Operador.TabIndex = 0;
+            this.gc_Listar_Operador.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gv_Listar_Operador});
             // 
-            // gv_Listar_Funcionario
+            // gv_Listar_Operador
             // 
-            this.gv_Listar_Funcionario.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gv_Listar_Operador.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_Excluir,
             this.col_Visualizar,
             this.col_Alterar,
-            this.col_Codigo_Funcionario,
-            this.col_Nome_Funcionario,
-            this.col_CPF,
-            this.col_RG,
-            this.col_Setor});
-            this.gv_Listar_Funcionario.GridControl = this.gc_Listar_Funcionario;
-            this.gv_Listar_Funcionario.Name = "gv_Listar_Funcionario";
-            this.gv_Listar_Funcionario.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gv_Listar_Funcionario_RowCellClick);
+            this.col_Codigo,
+            this.col_Nome_Chave,
+            this.col_Numero,
+            this.col_Setor,
+            this.col_Situacao});
+            this.gv_Listar_Operador.GridControl = this.gc_Listar_Operador;
+            this.gv_Listar_Operador.Name = "gv_Listar_Operador";
             // 
             // col_Excluir
             // 
@@ -189,42 +190,31 @@
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // col_Codigo_Funcionario
+            // col_Codigo
             // 
-            this.col_Codigo_Funcionario.Caption = "Codigo";
-            this.col_Codigo_Funcionario.FieldName = "Codigo_Funcionario";
-            this.col_Codigo_Funcionario.Name = "col_Codigo_Funcionario";
-            this.col_Codigo_Funcionario.Visible = true;
-            this.col_Codigo_Funcionario.VisibleIndex = 7;
-            this.col_Codigo_Funcionario.Width = 71;
+            this.col_Codigo.Caption = "Código";
+            this.col_Codigo.FieldName = "Codigo_Chave";
+            this.col_Codigo.Name = "col_Codigo";
+            this.col_Codigo.Width = 71;
             // 
-            // col_Nome_Funcionario
+            // col_Nome_Chave
             // 
-            this.col_Nome_Funcionario.Caption = "Nome Funcionario";
-            this.col_Nome_Funcionario.FieldName = "Nome_Funcionario";
-            this.col_Nome_Funcionario.Name = "col_Nome_Funcionario";
-            this.col_Nome_Funcionario.Visible = true;
-            this.col_Nome_Funcionario.VisibleIndex = 3;
-            this.col_Nome_Funcionario.Width = 241;
+            this.col_Nome_Chave.Caption = "Nome Chave";
+            this.col_Nome_Chave.FieldName = "Nome_Chave";
+            this.col_Nome_Chave.Name = "col_Nome_Chave";
+            this.col_Nome_Chave.Visible = true;
+            this.col_Nome_Chave.VisibleIndex = 3;
+            this.col_Nome_Chave.Width = 254;
             // 
-            // col_CPF
+            // col_Numero
             // 
-            this.col_CPF.Caption = "CPF";
-            this.col_CPF.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.col_CPF.FieldName = "CPF";
-            this.col_CPF.Name = "col_CPF";
-            this.col_CPF.Visible = true;
-            this.col_CPF.VisibleIndex = 4;
-            this.col_CPF.Width = 104;
-            // 
-            // col_RG
-            // 
-            this.col_RG.Caption = "RG";
-            this.col_RG.FieldName = "RG";
-            this.col_RG.Name = "col_RG";
-            this.col_RG.Visible = true;
-            this.col_RG.VisibleIndex = 5;
-            this.col_RG.Width = 74;
+            this.col_Numero.Caption = "Número";
+            this.col_Numero.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.col_Numero.FieldName = "Numero";
+            this.col_Numero.Name = "col_Numero";
+            this.col_Numero.Visible = true;
+            this.col_Numero.VisibleIndex = 4;
+            this.col_Numero.Width = 73;
             // 
             // col_Setor
             // 
@@ -232,8 +222,17 @@
             this.col_Setor.FieldName = "Nome_Setor";
             this.col_Setor.Name = "col_Setor";
             this.col_Setor.Visible = true;
-            this.col_Setor.VisibleIndex = 6;
-            this.col_Setor.Width = 173;
+            this.col_Setor.VisibleIndex = 5;
+            this.col_Setor.Width = 284;
+            // 
+            // col_Situacao
+            // 
+            this.col_Situacao.Caption = "Situação";
+            this.col_Situacao.FieldName = "Nome_Situacao";
+            this.col_Situacao.Name = "col_Situacao";
+            this.col_Situacao.Visible = true;
+            this.col_Situacao.VisibleIndex = 6;
+            this.col_Situacao.Width = 227;
             // 
             // panelControl6
             // 
@@ -241,7 +240,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl6.Location = new System.Drawing.Point(2, 150);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(969, 46);
+            this.panelControl6.Size = new System.Drawing.Size(689, 46);
             this.panelControl6.TabIndex = 1;
             // 
             // brn_Inserir
@@ -252,21 +251,20 @@
             this.brn_Inserir.Size = new System.Drawing.Size(134, 36);
             this.brn_Inserir.TabIndex = 14;
             this.brn_Inserir.Text = "Inserir (F5)";
-            this.brn_Inserir.Click += new System.EventHandler(this.btn_Inserir_Click);
             // 
             // groupControl1
             // 
             this.groupControl1.AutoSize = true;
             this.groupControl1.Controls.Add(this.btn_Limprar);
             this.groupControl1.Controls.Add(this.btn_Pesquisar);
-            this.groupControl1.Controls.Add(this.txt_CPF);
+            this.groupControl1.Controls.Add(this.txt_Chave);
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.txt_Nome_Funcionario);
+            this.groupControl1.Controls.Add(this.txt_Nome_Chave);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(969, 148);
+            this.groupControl1.Size = new System.Drawing.Size(689, 148);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Filtro";
             // 
@@ -278,7 +276,6 @@
             this.btn_Limprar.Size = new System.Drawing.Size(134, 36);
             this.btn_Limprar.TabIndex = 14;
             this.btn_Limprar.Text = "Limpar (F3)";
-            this.btn_Limprar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Pesquisar
             // 
@@ -288,44 +285,51 @@
             this.btn_Pesquisar.Size = new System.Drawing.Size(134, 36);
             this.btn_Pesquisar.TabIndex = 13;
             this.btn_Pesquisar.Text = "Pesquisar (F2)";
-            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
-            // txt_CPF
+            // txt_Chave
             // 
-            this.txt_CPF.Location = new System.Drawing.Point(124, 61);
-            this.txt_CPF.Name = "txt_CPF";
-            this.txt_CPF.Size = new System.Drawing.Size(155, 20);
-            this.txt_CPF.TabIndex = 12;
+            this.txt_Chave.Location = new System.Drawing.Point(115, 61);
+            this.txt_Chave.Name = "txt_Chave";
+            this.txt_Chave.Size = new System.Drawing.Size(155, 20);
+            this.txt_Chave.TabIndex = 12;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(95, 64);
+            this.labelControl7.Location = new System.Drawing.Point(19, 64);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(23, 13);
+            this.labelControl7.Size = new System.Drawing.Size(90, 13);
             this.labelControl7.TabIndex = 11;
-            this.labelControl7.Text = "CPF:";
+            this.labelControl7.Text = "Numero da Chave:";
             // 
-            // txt_Nome_Funcionario
+            // txt_Nome_Chave
             // 
-            this.txt_Nome_Funcionario.Location = new System.Drawing.Point(124, 35);
-            this.txt_Nome_Funcionario.Name = "txt_Nome_Funcionario";
-            this.txt_Nome_Funcionario.Size = new System.Drawing.Size(155, 20);
-            this.txt_Nome_Funcionario.TabIndex = 10;
+            this.txt_Nome_Chave.Location = new System.Drawing.Point(115, 35);
+            this.txt_Nome_Chave.Name = "txt_Nome_Chave";
+            this.txt_Nome_Chave.Size = new System.Drawing.Size(155, 20);
+            this.txt_Nome_Chave.TabIndex = 10;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(14, 38);
+            this.labelControl6.Location = new System.Drawing.Point(29, 38);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(104, 13);
+            this.labelControl6.Size = new System.Drawing.Size(80, 13);
             this.labelControl6.TabIndex = 9;
-            this.labelControl6.Text = "Nome do Funcionário:\r\n";
+            this.labelControl6.Text = "Nome da Chave:";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl3.Location = new System.Drawing.Point(693, 5);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(5, 371);
+            this.panelControl3.TabIndex = 7;
             // 
             // panelControl2
             // 
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 445);
+            this.panelControl2.Location = new System.Drawing.Point(0, 376);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(973, 5);
+            this.panelControl2.Size = new System.Drawing.Size(698, 5);
             this.panelControl2.TabIndex = 6;
             // 
             // panelControl1
@@ -333,28 +337,27 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(973, 5);
+            this.panelControl1.Size = new System.Drawing.Size(698, 5);
             this.panelControl1.TabIndex = 5;
             // 
-            // Funcionario_Listar_TL
+            // Chaves_Listar_TL
             // 
-            this.AllowDrop = true;
-            this.AllowMdiBar = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 450);
+            this.ClientSize = new System.Drawing.Size(698, 381);
             this.Controls.Add(this.panelControl5);
+            this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Name = "Funcionario_Listar_TL";
-            this.Text = "Pesquisar Funcionário";
+            this.Name = "Chaves_Listar_TL";
+            this.Text = "Chaves_Listar";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Funcionario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Funcionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Operador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Operador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
@@ -363,8 +366,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Funcionario.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Chave.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Chave.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.ResumeLayout(false);
@@ -375,29 +379,30 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.PanelControl panelControl7;
-        private DevExpress.XtraEditors.PanelControl panelControl6;
-        private DevExpress.XtraEditors.SimpleButton brn_Inserir;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton btn_Limprar;
-        private DevExpress.XtraEditors.SimpleButton btn_Pesquisar;
-        private DevExpress.XtraEditors.TextEdit txt_CPF;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit txt_Nome_Funcionario;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraGrid.GridControl gc_Listar_Funcionario;
-        private DevExpress.XtraGrid.Views.Grid.GridView gv_Listar_Funcionario;
+        private DevExpress.XtraGrid.GridControl gc_Listar_Operador;
+        private DevExpress.XtraGrid.Views.Grid.GridView gv_Listar_Operador;
         private DevExpress.XtraGrid.Columns.GridColumn col_Excluir;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn col_Visualizar;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn col_Alterar;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit3;
-        private DevExpress.XtraGrid.Columns.GridColumn col_Codigo_Funcionario;
-        private DevExpress.XtraGrid.Columns.GridColumn col_Nome_Funcionario;
-        private DevExpress.XtraGrid.Columns.GridColumn col_CPF;
-        private DevExpress.XtraGrid.Columns.GridColumn col_RG;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Codigo;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Nome_Chave;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Numero;
         private DevExpress.XtraGrid.Columns.GridColumn col_Setor;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Situacao;
+        private DevExpress.XtraEditors.PanelControl panelControl6;
+        private DevExpress.XtraEditors.SimpleButton brn_Inserir;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton btn_Limprar;
+        private DevExpress.XtraEditors.SimpleButton btn_Pesquisar;
+        private DevExpress.XtraEditors.TextEdit txt_Chave;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.TextEdit txt_Nome_Chave;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

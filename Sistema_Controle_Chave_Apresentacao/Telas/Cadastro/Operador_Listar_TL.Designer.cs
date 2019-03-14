@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Operador_Listar_TL));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -57,12 +57,12 @@
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.brn_Inserir = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btn_Limprar = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_Pesquisar = new DevExpress.XtraEditors.SimpleButton();
-            this.txt_CPF = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Nome_Operador = new DevExpress.XtraEditors.TextEdit();
+            this.btn_Pesquisar = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Limprar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_CPF = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -80,8 +80,8 @@
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Operador.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -183,9 +183,9 @@
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions10.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions10.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions10, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions4, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -204,9 +204,9 @@
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions11, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions5, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -225,9 +225,9 @@
             // repositoryItemButtonEdit3
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
-            editorButtonImageOptions12.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions12.Image")));
+            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions12, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions6, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -335,33 +335,6 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Filtro";
             // 
-            // btn_Limprar
-            // 
-            this.btn_Limprar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Limprar.ImageOptions.Image")));
-            this.btn_Limprar.Location = new System.Drawing.Point(255, 87);
-            this.btn_Limprar.Name = "btn_Limprar";
-            this.btn_Limprar.Size = new System.Drawing.Size(134, 36);
-            this.btn_Limprar.TabIndex = 14;
-            this.btn_Limprar.Text = "Limpar (F3)";
-            this.btn_Limprar.Click += new System.EventHandler(this.btn_Cancelar_Click);
-            // 
-            // btn_Pesquisar
-            // 
-            this.btn_Pesquisar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Pesquisar.ImageOptions.Image")));
-            this.btn_Pesquisar.Location = new System.Drawing.Point(115, 87);
-            this.btn_Pesquisar.Name = "btn_Pesquisar";
-            this.btn_Pesquisar.Size = new System.Drawing.Size(134, 36);
-            this.btn_Pesquisar.TabIndex = 13;
-            this.btn_Pesquisar.Text = "Pesquisar (F2)";
-            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
-            // 
-            // txt_CPF
-            // 
-            this.txt_CPF.Location = new System.Drawing.Point(115, 61);
-            this.txt_CPF.Name = "txt_CPF";
-            this.txt_CPF.Size = new System.Drawing.Size(155, 20);
-            this.txt_CPF.TabIndex = 12;
-            // 
             // labelControl7
             // 
             this.labelControl7.Location = new System.Drawing.Point(86, 64);
@@ -377,6 +350,26 @@
             this.txt_Nome_Operador.Size = new System.Drawing.Size(155, 20);
             this.txt_Nome_Operador.TabIndex = 10;
             // 
+            // btn_Pesquisar
+            // 
+            this.btn_Pesquisar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Pesquisar.ImageOptions.Image")));
+            this.btn_Pesquisar.Location = new System.Drawing.Point(115, 87);
+            this.btn_Pesquisar.Name = "btn_Pesquisar";
+            this.btn_Pesquisar.Size = new System.Drawing.Size(134, 36);
+            this.btn_Pesquisar.TabIndex = 13;
+            this.btn_Pesquisar.Text = "Pesquisar (F2)";
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
+            // 
+            // btn_Limprar
+            // 
+            this.btn_Limprar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Limprar.ImageOptions.Image")));
+            this.btn_Limprar.Location = new System.Drawing.Point(255, 87);
+            this.btn_Limprar.Name = "btn_Limprar";
+            this.btn_Limprar.Size = new System.Drawing.Size(134, 36);
+            this.btn_Limprar.TabIndex = 14;
+            this.btn_Limprar.Text = "Limpar (F3)";
+            this.btn_Limprar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(14, 38);
@@ -384,6 +377,13 @@
             this.labelControl6.Size = new System.Drawing.Size(95, 13);
             this.labelControl6.TabIndex = 9;
             this.labelControl6.Text = "Nome do Operador:\r\n";
+            // 
+            // txt_CPF
+            // 
+            this.txt_CPF.Location = new System.Drawing.Point(115, 61);
+            this.txt_CPF.Name = "txt_CPF";
+            this.txt_CPF.Size = new System.Drawing.Size(155, 20);
+            this.txt_CPF.TabIndex = 12;
             // 
             // Operador_Listar_TL
             // 
@@ -417,8 +417,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Nome_Operador.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_CPF.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -434,11 +434,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.TextEdit txt_Nome_Operador;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit txt_CPF;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.SimpleButton btn_Limprar;
-        private DevExpress.XtraEditors.SimpleButton btn_Pesquisar;
         private DevExpress.XtraEditors.SimpleButton brn_Inserir;
         private DevExpress.XtraGrid.GridControl gc_Listar_Operador;
         private DevExpress.XtraGrid.Views.Grid.GridView gv_Listar_Operador;
@@ -456,5 +452,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn col_Nivel_Operador;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraEditors.SimpleButton btn_Limprar;
+        private DevExpress.XtraEditors.SimpleButton btn_Pesquisar;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit txt_CPF;
     }
 }
