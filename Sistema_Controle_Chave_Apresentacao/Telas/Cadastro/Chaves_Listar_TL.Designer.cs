@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chaves_Listar_TL));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.gc_Listar_Operador = new DevExpress.XtraGrid.GridControl();
-            this.gv_Listar_Operador = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gc_Listar_Chave = new DevExpress.XtraGrid.GridControl();
+            this.gv_Listar_Chave = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.col_Excluir = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.col_Visualizar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.col_Alterar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.col_Codigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Codigo_Chave = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_Nome_Chave = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_Numero = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_Setor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,8 +63,8 @@
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Operador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Operador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Chave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Chave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
@@ -92,41 +92,42 @@
             // 
             // panelControl7
             // 
-            this.panelControl7.Controls.Add(this.gc_Listar_Operador);
+            this.panelControl7.Controls.Add(this.gc_Listar_Chave);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(2, 196);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(689, 173);
             this.panelControl7.TabIndex = 2;
             // 
-            // gc_Listar_Operador
+            // gc_Listar_Chave
             // 
-            this.gc_Listar_Operador.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gc_Listar_Operador.Location = new System.Drawing.Point(2, 2);
-            this.gc_Listar_Operador.MainView = this.gv_Listar_Operador;
-            this.gc_Listar_Operador.Name = "gc_Listar_Operador";
-            this.gc_Listar_Operador.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gc_Listar_Chave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gc_Listar_Chave.Location = new System.Drawing.Point(2, 2);
+            this.gc_Listar_Chave.MainView = this.gv_Listar_Chave;
+            this.gc_Listar_Chave.Name = "gc_Listar_Chave";
+            this.gc_Listar_Chave.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEdit2,
             this.repositoryItemButtonEdit3});
-            this.gc_Listar_Operador.Size = new System.Drawing.Size(685, 169);
-            this.gc_Listar_Operador.TabIndex = 0;
-            this.gc_Listar_Operador.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gv_Listar_Operador});
+            this.gc_Listar_Chave.Size = new System.Drawing.Size(685, 169);
+            this.gc_Listar_Chave.TabIndex = 0;
+            this.gc_Listar_Chave.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gv_Listar_Chave});
             // 
-            // gv_Listar_Operador
+            // gv_Listar_Chave
             // 
-            this.gv_Listar_Operador.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gv_Listar_Chave.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.col_Excluir,
             this.col_Visualizar,
             this.col_Alterar,
-            this.col_Codigo,
+            this.Codigo_Chave,
             this.col_Nome_Chave,
             this.col_Numero,
             this.col_Setor,
             this.col_Situacao});
-            this.gv_Listar_Operador.GridControl = this.gc_Listar_Operador;
-            this.gv_Listar_Operador.Name = "gv_Listar_Operador";
+            this.gv_Listar_Chave.GridControl = this.gc_Listar_Chave;
+            this.gv_Listar_Chave.Name = "gv_Listar_Chave";
+            this.gv_Listar_Chave.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gv_Listar_Chave_RowCellClick);
             // 
             // col_Excluir
             // 
@@ -142,9 +143,9 @@
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions10.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions10.Image")));
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions1, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions10, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -163,9 +164,9 @@
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions2, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions11, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -184,18 +185,18 @@
             // repositoryItemButtonEdit3
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions12.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions12.Image")));
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions3, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
+            new DevExpress.XtraEditors.Controls.EditorButton(editorButtonImageOptions12, DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, null)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // col_Codigo
+            // Codigo_Chave
             // 
-            this.col_Codigo.Caption = "Código";
-            this.col_Codigo.FieldName = "Codigo_Chave";
-            this.col_Codigo.Name = "col_Codigo";
-            this.col_Codigo.Width = 71;
+            this.Codigo_Chave.Caption = "Código";
+            this.Codigo_Chave.FieldName = "Codigo_Chave";
+            this.Codigo_Chave.Name = "Codigo_Chave";
+            this.Codigo_Chave.Width = 71;
             // 
             // col_Nome_Chave
             // 
@@ -251,6 +252,7 @@
             this.brn_Inserir.Size = new System.Drawing.Size(134, 36);
             this.brn_Inserir.TabIndex = 14;
             this.brn_Inserir.Text = "Inserir (F5)";
+            this.brn_Inserir.Click += new System.EventHandler(this.brn_Inserir_Click);
             // 
             // groupControl1
             // 
@@ -276,6 +278,7 @@
             this.btn_Limprar.Size = new System.Drawing.Size(134, 36);
             this.btn_Limprar.TabIndex = 14;
             this.btn_Limprar.Text = "Limpar (F3)";
+            this.btn_Limprar.Click += new System.EventHandler(this.btn_Limprar_Click);
             // 
             // btn_Pesquisar
             // 
@@ -285,6 +288,7 @@
             this.btn_Pesquisar.Size = new System.Drawing.Size(134, 36);
             this.btn_Pesquisar.TabIndex = 13;
             this.btn_Pesquisar.Text = "Pesquisar (F2)";
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
             // txt_Chave
             // 
@@ -356,8 +360,8 @@
             this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Operador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Operador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gc_Listar_Chave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Listar_Chave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
@@ -379,15 +383,15 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.PanelControl panelControl7;
-        private DevExpress.XtraGrid.GridControl gc_Listar_Operador;
-        private DevExpress.XtraGrid.Views.Grid.GridView gv_Listar_Operador;
+        private DevExpress.XtraGrid.GridControl gc_Listar_Chave;
+        private DevExpress.XtraGrid.Views.Grid.GridView gv_Listar_Chave;
         private DevExpress.XtraGrid.Columns.GridColumn col_Excluir;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn col_Visualizar;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn col_Alterar;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit3;
-        private DevExpress.XtraGrid.Columns.GridColumn col_Codigo;
+        private DevExpress.XtraGrid.Columns.GridColumn Codigo_Chave;
         private DevExpress.XtraGrid.Columns.GridColumn col_Nome_Chave;
         private DevExpress.XtraGrid.Columns.GridColumn col_Numero;
         private DevExpress.XtraGrid.Columns.GridColumn col_Setor;

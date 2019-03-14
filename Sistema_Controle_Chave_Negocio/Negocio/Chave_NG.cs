@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Controle_Chave_Negocio.Negocio
 {
-    class Chave_NG
+    public class Chave_NG
     {
         #region Pesquisar
 

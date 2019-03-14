@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sistema_Controle_Chave_Negocio.Negocio
 {
-    class SG_Cadastro_Chave_NG
+    public class SG_Cadastro_Chave_NG
     {
-        private static Chave_NG _Chave = null;
+        static Chave_NG _Chave = null;
 
-        public static Chave_NG Chave
+       public static Chave_NG Chave
         {
             get
             {
